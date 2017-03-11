@@ -1,15 +1,645 @@
 <!DOCTYPE html>
 <html>
+
 <body>
-<form action="index2.html" method="GET">
-<div style="text-align: center">
-    <div style="width: 50%; margin: 0 auto; text-align: left">
-      <h1>GWC-Adventure Safety, Team's website.</h1>
-        <font size="12" face="sans-serif">
-            <P>Welcome to Tutor For All project!!!</p>
-        </font>
-    </div>
+
+<div id = "StartMenuGame" >
+<font size ="5"> <font color = "skyblue">
+<h1> Welcome to Adventure safety! Choose a scenerio to get started or learn a little more about the game!</h1>
+
+
+<font size = "10">
+<font color = "magenta"><input type="radio" name="group1" value="instructions" onclick="FireSafety()"> Fire Safety
+
+<br>
+
+<font color = "skyblue"><input type="radio" name="group1" value="instructions"> Bullying/Peer Pressure
+
+<br>
+
+<font color = "magenta"><input type="radio" name="group1" onclick = "Title()" value="instructions"> Tornado Safety
+
+<br>
+
+<font color = "skyblue"><input type="radio" name="group1" onclick = "About()" value="instructions" onclick="About()"> About
+
 </div>
-</form>
+
+
+
+
+
+
+
+
+
+
+
+<div id="TornadoSafetyTitle" style = "visibility: hidden">
+<font size = "5"> <font color = "skyblue"><h1>A category 4 tornado is aproaching fast! Find safety fast! What do you do? </h1>
+
+</select>
+<font color = "magenta"> <input type = "radio" name = "group1"  onclick = "RideBusHome()"value = "Ride the bus"> Ride the bus home (takes 20 minutes)
+<br>
+<font color ="magenta"> 
+
+<input type = "radio" name = "group1" onclick="WalkHome()" value = "Walk home"> Walk home (takes 30 minutes)
+<br>
+<font color = "magenta"> <input type = "radio" name = "group1" onclick= "GoToSchool()" value = "Take shelter in school"> Take shelter in a nearby school
+
+</div>
+
+
+
+<script>
+function Title(){ 
+
+
+document.getElementById("TornadoSafetyTitle").style.visibility = "visible";
+document.getElementById("StartMenuGame").style.visibility = "hidden";
+
+}
+</script>
+
+
+
+<div id = "AboutGame" style = "visibility: hidden">
+<font color = "skyblue"><font size="5"><h1>Adventure safety is a fun interactive game that teaches important life habits during a certain scenario. There are many different scenario's that you can play! Go back to the main menu to play! Have fun!<h1>
+
+
+<font size = "10"><font color = "magenta"><input type = "radio" name = "group1" onclick = "StartMenu2()" value = "main menu"> Main Menu
+</div>
+
+
+<script>
+function About(){ 
+
+
+document.getElementById("AboutGame").style.visibility = "visible";
+document.getElementById("StartMenuGame").style.visibility = "hidden";
+
+}
+</script>
+
+
+
+<div id = "StartMenuGame" style= "visibility: hidden">
+<font size ="5"> <font color = "skyblue">
+<h1> Welcome to Adventure safety! Choose a scenerio to get started or learn a little more about the game!</h1>
+
+
+<font size = "10">
+<font color = "magenta"><input type="radio" name="group1" value="instructions" onclick="FireSafety()"> Fire Safety
+
+<br>
+
+<font color = "skyblue"><input type="radio" name="group1" value="instructions"> Bullying/Peer Pressure
+
+<br>
+
+<font color = "magenta"><input type="radio" name="group1" onclick = "Title()" value="instructions"> Tornado Safety
+
+<br>
+
+<font color = "skyblue"><input type="radio" name="group1" onclick = "About()" value="instructions" onclick="About()"> About
+
+</div>
+
+<script>
+function StartMenu2(){ 
+
+
+document.getElementById("StartMenuGame").style.visibility = "visible";
+document.getElementById("AboutGame").style.visibility = "hidden";
+
+}
+</script>
+
+
+
+
+
+
+<div id = "TornadoSafetyRideBus" style="visibility: hidden">
+<h1><font size="10"><font color="skyblue"> Oh no! The bus broke down! Luckily no one got hurt and you are safely outside. What do you do now?</h1>
+
+</select>
+<font size = "5"><font color = "magenta"><input type="radio" name="group1" onclick = "Bleachers()" value="welcome"> There is a football field nearby and you go hide under the bleachers
+<br>
+<input type="radio" name="group1" onclick = "Ditch()" value="instructions"> You see a nearby ditch and go duck in it
+<br>
+<input type="radio" name="group1" onclick = "WalkHome2()" value="Play Now"> You start to walk home but it will take 15 minutes
+<br>
+
+</div>
+
+<script>
+function RideBusHome(){ 
+
+
+document.getElementById("TornadoSafetyRideBus").style.visibility = "visible";
+document.getElementById("TornadoSafetyTitle").style.visibility = "hidden";
+
+}
+</script>
+
+
+
+
+
+
+
+<div id = "TornadoSafetyBleachers" style = "visibility: hidden">
+<font color = "skyblue"> <h1>The hail starts coming through the bleachers! Find shelter fast! What do you do?</h1>
+</select>
+<font size = "5"><font color = "magenta"> <input type = "radio" name = "group1" onclick = "WalkHome3()" value = "walk home"> Walk home (takes 10 minutes)
+<br>
+<input type = "radio" name = "group1" onclick = "GoToSchool3()" value = "Go into the school"> Go into the nearby school
+<br>
+<input type = "radio" name = "group1" onclick = "HideUnderTree2()" value = "Hide under a tree"> Hide under a tree
+
+<script>
+function Bleachers(){ 
+
+
+document.getElementById("TornadoSafetyBleachers").style.visibility = "visible";
+document.getElementById("TornadoSafetyRideBus").style.visibility = "hidden";
+
+}
+</script>
+
+
+
+
+
+
+<div id = "TornadoSafetyWalkHome3" style = "visibility: hidden">
+<h1> <font size = "10"> <font color = "skyblue"> You are walking home and you didn't make it back in time. The tornado caught you and you are now in the hospital! Try again.</h1>
+</select>
+<font size = "10"><font color = "magenta"> <input type = "radio" name = "group1" onclick = "StartOver()" value = "start over"> Start over
+<br>
+<font size = "10"> <font color = "magenta"> <input type = "radio" name = "group1" onclick = "StartMenu()" value = "main menu"> Go to the main menu
+</div>
+
+<script>
+function WalkHome3(){ 
+
+
+document.getElementById("TornadoSafetyWalkHome3").style.visibility = "visible";
+document.getElementById("TornadoSafetyBleachers").style.visibility = "hidden";
+
+}
+</script>
+
+
+
+
+
+<div id="TornadoSafetyTitle" style = "visibility: hidden">
+<font size = "5"> <font color = "skyblue"><h1>A category 4 tornado is aproaching fast! Find safety fast! What do you do? </h1>
+
+</select>
+<font color = "magenta"> <input type = "radio" name = "group1"  onclick = "RideBusHome()"value = "Ride the bus"> Ride the bus home (takes 20 minutes)
+<br>
+<font color ="magenta"> 
+
+<input type = "radio" name = "group1" onclick="WalkHome()" value = "Walk home"> Walk home (takes 30 minutes)
+<br>
+<font color = "magenta"> <input type = "radio" name = "group1" onclick= "GoToSchool()" value = "Take shelter in school"> Take shelter in a nearby school
+
+</div>
+
+<script>
+function StartOver(){ 
+
+
+document.getElementById("TornadoSafetyTitle").style.visibility = "visible";
+document.getElementById("TornadoSafetyWalkHome3").style.visibility = "hidden";
+
+}
+</script>
+
+<div id = "StartMenuGame">
+<font size ="5"> <font color = "skyblue">
+<h1> Welcome to Adventure safety! Choose a scenerio to get started or learn a little more about the game!</h1>
+
+
+<font size = "10">
+<font color = "magenta"><input type="radio" name="group1" value="instructions" onclick="FireSafety()"> Fire Safety
+
+<br>
+
+<font color = "skyblue"><input type="radio" name="group1" value="instructions"> Bullying/Peer Pressure
+
+<br>
+
+<font color = "magenta"><input type="radio" name="group1" onclick = "Title()" value="instructions"> Tornado Safety
+
+<br>
+
+<font color = "skyblue"><input type="radio" name="group1" onclick = "About()" value="instructions" onclick="About()"> About
+
+
+</div>
+
+<script>
+function StartMenu(){ 
+
+
+document.getElementById("StartMenuGame").style.visibility = "visible";
+document.getElementById("TornadoSafetyWalkHome3").style.visibility = "hidden";
+
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id = "TornadoSafetyGoToSchool3" style = "visibility: hidden">
+<font color = "skyblue"> <font size = "5"> <h1> You go into the school and see other people hiding too. There are many places to hide and take shelter. Where do you go? </h1>
+</select>
+<font color = "magenta"> 
+<input type = "radio" name = "group1" onclick = "ComfySpot()" value = "soft comfortable spot"> A big, comfortable spot near the window
+<br>
+<input type = "radio" name = "group1" onclick = "UnderDesk()" value = "under a desk"> Duck under a desk
+<br>
+<input type = "radio" name = "group1" onclick = "CrampedSpot()" value = "a cramped spot"> Go into a cramped, uncomfortable spot far away from the window in the school basement
+</div>
+
+<script>
+function GoToSchool3(){ 
+
+
+document.getElementById("TornadoSafetyGoToSchool3").style.visibility = "visible";
+document.getElementById("TornadoSafetyBleachers").style.visibility = "hidden";
+
+}
+</script>
+
+<div id = "TornadoSafetyComfySpot" style = "visibility: hidden">
+<h1> <font size = "10"> <font color = "skyblue"> The window shattered! You are now in the hospital! Try again.</h1>
+</select>
+<font size = "10"><font color = "magenta"> <input type = "radio" name = "group1" onclick= "TornadoSafetyTitle3()" value = "start over"> Start over
+<br>
+<font size = "10"> <font color = "magenta"> <input type = "radio" name = "group1" onclick = "MainMenu3()" value = "main menu">  Main menu
+</div>
+
+<script>
+function ComfySpot(){ 
+
+
+document.getElementById("TornadoSafetyComfySpot").style.visibility = "visible";
+document.getElementById("TornadoSafetyGoToSchool3").style.visibility = "hidden";
+
+}
+</script>
+
+
+
+<div id="TornadoSafetyTitle" style = "visibility: hidden">
+<font size = "5"> <font color = "skyblue"><h1>A category 4 tornado is aproaching fast! Find safety fast! What do you do? </h1>
+
+</select>
+<font color = "magenta"> <input type = "radio" name = "group1"  onclick = "RideBusHome()"value = "Ride the bus"> Ride the bus home (takes 20 minutes)
+<br>
+<font color ="magenta"> 
+
+<input type = "radio" name = "group1" onclick="WalkHome()" value = "Walk home"> Walk home (takes 30 minutes)
+<br>
+<font color = "magenta"> <input type = "radio" name = "group1" onclick= "GoToSchool()" value = "Take shelter in school"> Take shelter in a nearby school
+
+</div>
+
+
+<script>
+function TornadoSafetyTitle3(){ 
+
+
+document.getElementById("TornadoSafetyTitle").style.visibility = "visible";
+document.getElementById("TornadoSafetyGoToSchool3").style.visibility = "hidden";
+
+}
+</script>
+
+
+
+
+
+
+<div id = "StartMenuGame">
+<font size ="5"> <font color = "skyblue">
+<h1> Welcome to Adventure safety! Choose a scenerio to get started or learn a little more about the game!</h1>
+
+
+<font size = "10">
+<font color = "magenta"><input type="radio" name="group1" value="instructions" onclick="FireSafety()"> Fire Safety
+
+<br>
+
+<font color = "skyblue"><input type="radio" name="group1" value="instructions"> Bullying/Peer Pressure
+
+<br>
+
+<font color = "magenta"><input type="radio" name="group1" onclick = "Title()" value="instructions"> Tornado Safety
+
+<br>
+
+<font color = "skyblue"><input type="radio" name="group1" onclick = "About()" value="instructions" onclick="About()"> About
+
+
+</div>
+
+<script>
+function MainMenu3(){ 
+
+
+document.getElementById("StartMenuGame").style.visibility = "visible";
+document.getElementById("TornadoSafetyComfySpot").style.visibility = "hidden";
+
+}
+</script>
+
+
+
+<div id = "TornadoSafetyUnderDesk" style = "visibility: hidden">
+<font color = "skyblue"><font size = "5"><h1> Congratulations! You survived the tornado! </h1>
+</select> <font size = "10">
+<font color = "magenta"> <input type = "radio" name = "group1" value = "some safety tips"> Safety tips for tornado's 
+<br>
+<input type = "radio" name = "group1" value = "main menu"> Main menu
+
+</div>
+
+<script>
+function UnderDesk(){ 
+
+
+document.getElementById("TornadoSafetyUnderDesk").style.visibility = "visible";
+document.getElementById("TornadoSafetyGoToSchool3").style.visibility = "hidden";
+
+}
+</script>
+
+
+<div id = "TornadoSafetyCrampedSpot" style = "visibility: hidden">
+<font color = "skyblue"><font size = "5"><h1> Congratulations! You survived the tornado! </h1>
+</select> <font size = "10">
+<font color = "magenta"> <input type = "radio" name = "group1" value = "some safety tips"> Safety tips for tornado's 
+<br>
+<input type = "radio" name = "group1" value = "main menu"> Main menu
+</div>
+
+<script>
+function CrampedSpot(){ 
+
+
+document.getElementById("TornadoSafetyCrampedSpot").style.visibility = "visible";
+document.getElementById("TornadoSafetyGoToSchool3").style.visibility = "hidden";
+
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id = "TornadoSafetyHideUnderTree2" style = "visibility: hidden">
+<h1> <font size = "10"> <font color = "skyblue"> You have been electricuted! You are now in the hospital! Try again.</h1>
+</select>
+<font size = "10"><font color = "magenta"> <input type = "radio" name = "group1" onclick = "StartOver()" value = "start over"> Start over
+<br>
+<font size = "10"> <font color = "magenta"> <input type = "radio" name = "group1" onclick = "StartMenu()" value = "main menu">  Main menu
+</div>
+
+<script>
+function HideUnderTree2(){ 
+
+
+document.getElementById("TornadoSafetyHideUnderTree2").style.visibility = "visible";
+document.getElementById("TornadoSafetyBleachers").style.visibility = "hidden";
+
+}
+</script>
+
+
+
+<div id="TornadoSafetyTitle" style = "visibility: hidden">
+<font size = "5"> <font color = "skyblue"><h1>A category 4 tornado is aproaching fast! Find safety fast! What do you do? </h1>
+
+</select>
+<font color = "magenta"> <input type = "radio" name = "group1"  onclick = "RideBusHome()"value = "Ride the bus"> Ride the bus home (takes 20 minutes)
+<br>
+<font color ="magenta"> 
+
+<input type = "radio" name = "group1" onclick="WalkHome()" value = "Walk home"> Walk home (takes 30 minutes)
+<br>
+<font color = "magenta"> <input type = "radio" name = "group1" onclick= "GoToSchool()" value = "Take shelter in school"> Take shelter in a nearby school
+
+</div>
+
+<script>
+function StartOver(){ 
+
+
+document.getElementById("TornadoSafetyTitle").style.visibility = "visible";
+document.getElementById("TornadoSafetyHideUnderTree2").style.visibility = "hidden";
+
+}
+</script>
+
+
+<div id = "StartMenuGame">
+<font size ="5"> <font color = "skyblue">
+<h1> Welcome to Adventure safety! Choose a scenerio to get started or learn a little more about the game!</h1>
+
+
+<font size = "10">
+<font color = "magenta"><input type="radio" name="group1" value="instructions" onclick="FireSafety()"> Fire Safety
+
+<br>
+
+<font color = "skyblue"><input type="radio" name="group1" value="instructions"> Bullying/Peer Pressure
+
+<br>
+
+<font color = "magenta"><input type="radio" name="group1" onclick = "Title()" value="instructions"> Tornado Safety
+
+<br>
+
+<font color = "skyblue"><input type="radio" name="group1" onclick = "About()" value="instructions" onclick="About()"> About
+
+
+</div>
+
+<script>
+function StartMenu(){ 
+
+
+document.getElementById("StartMenuGame").style.visibility = "visible";
+document.getElementById("TornadoSafetyHideUnderTree2").style.visibility = "hidden";
+
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id = "TornadoSafetyDitch" Style = "visibility: hidden">
+<font color = "skyblue"><font size = "5"><h1> Congratulations! You survived the tornado! </h1>
+</select> <font size = "10">
+<font color = "magenta"> <input type = "radio" name = "group1" value = "some safety tips"> Safety tips for tornado's 
+<br>
+<input type = "radio" name = "group1" value = "main menu"> Main menu
+</div>
+
+<script>
+function Ditch(){ 
+
+
+document.getElementById("TornadoSafetyDitch").style.visibility = "visible";
+document.getElementById("TornadoSafetyRideBus").style.visibility = "hidden";
+
+}
+</script>
+
+<div id = "TornadoSafetyWalkHome2" style = "visibility: hidden">
+<h1> <font size = "10"> <font color = "skyblue"> You are walking home and you didn't make it back in time. The tornado caught you and you are now in the hospital! Try again.</h1>
+</select>
+<font size = "10"><font color = "magenta"> <input type = "radio" name = "group1" value = "start over"> Start over
+<br>
+<font size = "10"> <font color = "magenta"> <input type = "radio" name = "group1" value = "main menu"> Go to the main menu
+</div>
+
+<script>
+function WalkHome2(){ 
+
+
+document.getElementById("TornadoSafetyWalkHome2").style.visibility = "visible";
+document.getElementById("TornadoSafetyRideBus").style.visibility = "hidden";
+
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id = "TornadoSafetyWalkHome" style = "visibility: hidden">
+<h1> <font size = "10"> <font color = "skyblue"> You are walking home and you didn't make it back in time. The tornado caught you and you are now in the hospital! Try again.</h1>
+</select>
+<font size = "10"><font color = "magenta"> <input type = "radio" name = "group1" value = "start over"> Start over
+<br>
+<font size = "10"> <font color = "magenta"> <input type = "radio" name = "group1" value = "main menu"> Go to the main menu
+
+<script>
+function WalkHome(){ 
+
+
+document.getElementById("TornadoSafetyWalkHome").style.visibility = "visible";
+document.getElementById("TornadoSafetyTitle").style.visibility = "hidden";
+
+}
+</script>
+
+<div id = "TornadoSafetyGoToSchool" style="visibility: hidden">
+<font color = "skyblue"> <font size = "5"> <h1> You go into the school and see other people hiding too. There are many places to hide and take shelter. Where do you go? </h1>
+</select>
+<font color = "magenta"> 
+<input type = "radio" name = "group1" on click = "ComfySpot5()" value = "soft comfortable spot"> A big, comfortable spot near the window
+<br>
+<input type = "radio" name = "group1" onclick = "UnderDesk5()" value = "under a desk"> Duck under a desk
+<br>
+<input type = "radio" name = "group1" onclick = "CrampedSpot5()" value = "a cramped spot"> Go into a cramped, uncomfortable spot far away from the window in the school basement
+
+<script>
+function GoToSchool(){ 
+
+
+document.getElementById("TornadoSafetyGoToSchool").style.visibility = "visible";
+document.getElementById("TornadoSafetyTitle").style.visibility = "hidden";
+
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
 </body>
+
 </html>
